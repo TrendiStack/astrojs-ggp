@@ -1,7 +1,6 @@
 const PageLayout = ({ children, className, noLayout }) => {
   const styles = {
     container: 'container mx-auto px-[5%] lg:px-[2%]',
-
     noLayout: '',
   };
 

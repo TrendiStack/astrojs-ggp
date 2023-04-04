@@ -5,7 +5,7 @@ import FormLabel from './ui/FormLabel';
 
 const Contact = () => {
   return (
-    <PageLayout
+    <div
       className="
       fixed 
       bottom-0 
@@ -18,7 +18,8 @@ const Contact = () => {
       min-h-screen 
       text-[#252422] 
       font-medium 
-      px-[1%] 
+      px-[5%] 
+      lg:px-[2%]
       pt-40 "
     >
       <h1 className="uppercase spartan text-center text-3xl sm:text-4xl md:text-5xl lg:text-7xl">
@@ -47,7 +48,7 @@ const Contact = () => {
           Designed by TrendiStack
         </a>
       </div>
-    </PageLayout>
+    </div>
   );
 };
 
