@@ -5,12 +5,12 @@ import gsap from 'gsap/dist/gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import emptyCone from '../../assets/images/empty-conev2.png';
 import { IoMdArrowDropdown } from 'react-icons/io/index';
-gsap.registerPlugin(ScrollTrigger);
 
 const Header = forwardRef(({ landing }, ref) => {
   const imgRef = useRef(null);
   const emptyConeRef = useRef(null);
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
     const el = emptyConeRef.current;
     // Move image down on scroll
     gsap
