@@ -1,4 +1,4 @@
-import { ImArrowUp } from 'react-icons/im';
+import { TbArrowBigUpFilled } from 'react-icons/ti';
 import { useRef, useEffect, useState } from 'react';
 import gsap from 'gsap/dist/gsap';
 import scrolltextnoggp from '../assets/images/scrolltextnoggp.png';

@@ -14,7 +14,7 @@ const Nav = () => {
         <Button menuBtn>menu</Button>
         <div className="fixed rotate-90 right-0 top-2/4 mt-28 transform translate-y-1/2 origin-top-right mx-[5%] lg:mx-[2%]">
           <Button reservation className="">
-            Reservation
+            reservation
           </Button>
         </div>
       </nav>
