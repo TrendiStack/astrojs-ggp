@@ -2,11 +2,11 @@ import { useRef, useEffect } from 'react';
 import gsap from 'gsap/dist/gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import restaurant from '../assets/images/restaurant.avif';
-gsap.registerPlugin(ScrollTrigger);
 
 const Circle = () => {
   const ref = useRef(null);
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
     const el = ref.current;
     gsap
       .timeline({

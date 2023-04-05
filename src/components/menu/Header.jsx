@@ -4,7 +4,7 @@ import caramelCones from '../../assets/images/caramel-cone.svg';
 import gsap from 'gsap/dist/gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import emptyCone from '../../assets/images/empty-conev2.png';
-import { IoMdArrowDropdown } from 'react-icons/io';
+import { IoMdArrowDropdown } from 'react-icons/io/index';
 gsap.registerPlugin(ScrollTrigger);
 
 const Header = forwardRef(({ landing }, ref) => {

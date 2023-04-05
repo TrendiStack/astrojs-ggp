@@ -1,6 +1,6 @@
-import { CgFacebook } from 'react-icons/cg';
-import { AiOutlineInstagram } from 'react-icons/ai';
-import { SiTripadvisor } from 'react-icons/si';
+import { CgFacebook } from 'react-icons/cg/index';
+import { AiOutlineInstagram } from 'react-icons/ai/index';
+import { SiTripadvisor } from 'react-icons/si/index';
 import { useContext } from 'react';
 import { MenuContext } from '../../context/MenuContext';
 

@@ -1,18 +1,7 @@
-import { gelato, sorbet, soy, pizza } from '../../data';
-import { useEffect, useRef, useState } from 'react';
-import ScrollTrigger from 'gsap/dist/ScrollTrigger';
-import CardSection from './CardSection';
-import gsap from 'gsap/dist/gsap';
-import HeaderText from './HeaderText';
-import Header from './Header';
-import LI from './LI';
-import UL from './UL';
-import ScrollAlert from './ScrollAlert';
+import { useState } from 'react';
 import useIsMobile from '../../utils/useIsMobile';
 import LargeMenuPage from './LargeMenuPage';
 import SmallMenuPage from './SmallMenuPage';
-
-gsap.registerPlugin(ScrollTrigger);
 
 const GelatoMenu = () => {
   const [isHovered, setIsHovered] = useState(false);

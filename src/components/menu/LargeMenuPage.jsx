@@ -8,7 +8,6 @@ import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import ScrollAlert from './ScrollAlert';
 import UL from './UL';
 import LI from './LI';
-gsap.registerPlugin(ScrollTrigger);
 
 const LargeMenuPage = ({ isMobile, isHovered, setIsHovered }) => {
   const container = useRef(null);
@@ -17,6 +16,7 @@ const LargeMenuPage = ({ isMobile, isHovered, setIsHovered }) => {
   const sectionTwo = useRef(null);
   const sectionThree = useRef(null);
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
     gsap
       .timeline({
         scrollTrigger: {

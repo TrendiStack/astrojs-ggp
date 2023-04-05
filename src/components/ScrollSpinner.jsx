@@ -1,11 +1,9 @@
-import { TbArrowBigUpFilled } from 'react-icons/ti';
+import { TbArrowBigUpFilled } from 'react-icons/tb/index';
 import { useRef, useEffect, useState } from 'react';
 import gsap from 'gsap/dist/gsap';
 import scrolltextnoggp from '../assets/images/scrolltextnoggp.png';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import useIsMobile from '../utils/useIsMobile';
-
-gsap.registerPlugin(ScrollTrigger);
 
 const ScrollSpinner = () => {
   const [atBottom, setAtBottom] = useState(false);
@@ -23,6 +21,7 @@ const ScrollSpinner = () => {
   };
 
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
     const scrollHandler = () => {
       const windowHeight = window.innerHeight;
       const scrollY = window.scrollY;
@@ -93,7 +92,7 @@ const ScrollSpinner = () => {
         ref={buttonRef}
         className="fixed bottom-20 right-[1%] w-24 h-24 bg-[#a3a380] rounded-full cursor-pointer"
       >
-        <ImArrowUp className="relative top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl" />
+        <TbArrowBigUpFilled className="relative top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl" />
       </div>
     </>
   );
