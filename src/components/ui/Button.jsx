@@ -10,10 +10,7 @@ const Button = ({
   contact,
 }) => {
   const { menu, handleClick } = useContext(MenuContext);
-  const [mouseOver, setMouseOver] = useState({
-    menu: false,
-    reservation: false,
-  });
+  const [mouseOver, setMouseOver] = useState(false);
   const variants = {
     circle: `${
       menu ? 'bg-white text-[#252422]' : 'bg-[#a3a380] text-white'
@@ -32,6 +29,8 @@ const Button = ({
       onClick={() => {
         menuBtn && handleClick();
       }}
+      onMouseEnter={() => setMouseOver(true)}
+      onMouseLeave={() => setMouseOver(false)}
       {...(contact && { type: 'submit' })}
       className={`${
         menuBtn
@@ -45,11 +44,7 @@ const Button = ({
           : null
       } ${className} `}
     >
-      <div
-        onMouseEnter={() => setMouseOver(true)}
-        onMouseLeave={() => setMouseOver(false)}
-        className="flex flex-col items-center relative overflow-hidden "
-      >
+      <div className="flex flex-col items-center relative overflow-hidden">
         <p
           className={`relative ${
             mouseOver ? 'bottom-8' : 'bottom-0'
