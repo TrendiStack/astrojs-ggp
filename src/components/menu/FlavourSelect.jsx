@@ -11,7 +11,7 @@ import {
   pizza,
 } from '../../data';
 import LI from './LI';
-import UL from './Ul';
+import UL from './UL';
 import FlavourSelectContainer from '../../pages/menu/components/FlavourSelectContainer';
 
 const FlavourRef = ({ selected, type }) => {
