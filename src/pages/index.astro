@@ -1,15 +1,17 @@
 ---
-import Banner from '../components/Banner';
-import Carousel from '../components/Carousel';
-import Circle from '../components/Circle';
+import Banner from '../components/landing/Banner';
+import CakeBanner from '../components/landing/CakeBanner';
+import Carousel from '../components/landing/Carousel';
+import Circle from '../components/landing/Circle';
 import Contact from '../components/Contact';
-import Footer from '../components/Footer';
-import Header from '../components/menu/Header';
+import Header from '../components/Header';
 import Layout from '../layouts/Layout.astro';
 import LenisScroll from '../components/LenisScroll';
 import Loading from '../components/Loading';
+import Location from '../components/landing/Location';
 import Nav from '../components/nav/Nav.jsx';
 import ScrollSpinner from '../components/ScrollSpinner';
+
 import '../styles/global.css';
 ---
 
@@ -17,15 +19,18 @@ import '../styles/global.css';
   <LenisScroll client:only />
   <Loading client:load />
   <main id="home-page" class="overflow-hidden mb-[85vh]">
-    <div class="flex flex-col gap-y-44 lg:gap-y-52 spartan bg-white">
+    <CakeBanner client:only />
+    <div
+      class="flex flex-col gap-y-44 lg:gap-y-52 spartan bg-white relative z-[1] rounded-b-3xl"
+    >
       <Nav client:load />
       <ScrollSpinner client:load />
-      <Header client:load landing />
+      <Header client:load route="landing" />
       <Banner />
       <Carousel />
       <Circle client:visible />
+      <Location client:visible />
     </div>
     <Contact client:visible />
-    <Footer client:visible />
   </main>
 </Layout>

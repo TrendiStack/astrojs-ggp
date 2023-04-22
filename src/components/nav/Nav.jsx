@@ -1,7 +1,6 @@
 import { MenuProvider } from '../../context/MenuContext';
-import Logo from '../Logo';
-import Menu from '../Menu';
-
+import Logo from './Logo';
+import Menu from './Menu';
 import NavTitle from '../nav/NavTitle';
 import Button from '../ui/Button';
 
@@ -12,10 +11,10 @@ const Nav = () => {
         <Logo />
         <NavTitle />
         <Button menuBtn>menu</Button>
-        <div className="fixed rotate-90 right-0 top-2/4 mt-28 transform translate-y-1/2 origin-top-right mx-[5%] lg:mx-[2%]">
-          <Button reservation className="">
-            reservation
-          </Button>
+        <div className="fixed rotate-90 right-0 top-1/2 mt-10 transform translate-y-1/2 origin-top-right mx-[5%] lg:mx-[2%]">
+          <a href="reservation">
+            <Button reservation>Reservation</Button>
+          </a>
         </div>
       </nav>
       <Menu />

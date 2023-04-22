@@ -1,19 +1,23 @@
 import { gsap } from 'gsap';
-import { useEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
+import { CursorContext } from '../../pages/menu/context/CursorContext';
 
-const ScrollAlert = ({ isHovered, setIsHovered }) => {
+const ScrollAlert = () => {
+  const { isHovered } = useContext(CursorContext);
   const [mousePosition, setMousePosition] = useState({
     x: 0,
     y: 0,
   });
+
   const container = useRef(null);
   useEffect(() => {
+    const el = container.current;
+    if (!el) return;
     const handleMouseMove = e => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
     window.addEventListener('mousemove', handleMouseMove);
 
-    const el = container.current;
     if (isHovered) {
       gsap.to(el, {
         scale: 1,
@@ -26,11 +30,11 @@ const ScrollAlert = ({ isHovered, setIsHovered }) => {
         duration: 0.5,
       });
     }
-
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
     };
-  }, [container, isHovered, mousePosition]);
+  }, [mousePosition]);
+
   return (
     <div
       ref={container}
@@ -38,7 +42,8 @@ const ScrollAlert = ({ isHovered, setIsHovered }) => {
       fixed
       -top-20
       -left-20
-      flex
+      hidden
+      lg:flex
       justify-center
       items-center
       aspect-square
@@ -46,6 +51,7 @@ const ScrollAlert = ({ isHovered, setIsHovered }) => {
       rounded-full 
       z-[1000]
       pointer-events-none
+      text-sm
       "
     >
       <p className="py-2 px-3 text-white">Scroll</p>

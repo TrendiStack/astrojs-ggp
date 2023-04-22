@@ -1,0 +1,20 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav/Nav.jsx';
+import Contact from '../../components/Contact';
+import Header from '../../components/Header.jsx';
+import Loading from '../../components/Loading';
+import LenisScroll from '../../components/LenisScroll';
+
+import '../../styles/global.css';
+---
+
+<Layout title="Contact Us">
+  <Loading client:load />
+  <Nav client:visible />
+  <LenisScroll client:only />
+  <main class="spartan">
+    <Header route="contact" client:visible />
+    <Contact client:visible />
+  </main>
+</Layout>

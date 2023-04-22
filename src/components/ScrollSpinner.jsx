@@ -25,7 +25,8 @@ const ScrollSpinner = () => {
     const scrollHandler = () => {
       const windowHeight = window.innerHeight;
       const scrollY = window.scrollY;
-      if (windowHeight + scrollY >= 7000) {
+      const bodyHeight = document.body.offsetHeight;
+      if (windowHeight + scrollY >= bodyHeight - 200) {
         setAtBottom(true);
       } else {
         setAtBottom(false);
@@ -76,7 +77,7 @@ const ScrollSpinner = () => {
     <>
       <div
         ref={containerRef}
-        className={`hidden xl:block fixed bottom-10 right-0 scale-75 z-[997] ${
+        className={`hidden xl:block fixed bottom-2 right-0 scale-75 z-[997] ${
           isMobile ? 'hidden' : 'block'
         }}`}
       >

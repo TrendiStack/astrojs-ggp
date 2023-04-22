@@ -7,7 +7,7 @@ const Button = ({
   large,
   className,
   children,
-  contact,
+  submit,
 }) => {
   const { menu, handleClick } = useContext(MenuContext);
   const [mouseOver, setMouseOver] = useState(false);
@@ -18,9 +18,9 @@ const Button = ({
     long: `${
       menu ? 'bg-white text-[#252422]' : 'bg-[#a3a380] text-white'
     } text-base md:text-xl lg:text-3xl px-6 py-3 rounded-full`,
-    lg: 'bg-[#a3a380] text-white text-2xl font-medium px-10 py-3 md:px-14 md:py-5 rounded-full',
+    lg: 'bg-[#a3a380] text-white text-2xl font-medium px-10 py-3 2xl:px-14 2xl:py-5 rounded-full',
     dining:
-      'absolute left-[1%] bottom-24 lg:bottom-36 bg-[#a3a380] text-white rounded-full text-base md:text-xl lg:text-2xl py-4 px-8 text-2xl font-medium',
+      'absolute left-5 lg:left-[2%] bottom-10 lg:bottom-24 lg:bottom-12 bg-[#a3a380] text-white rounded-full text-base md:text-xl lg:text-2xl py-4 px-8 text-2xl font-medium',
   };
   const { circle, long, lg, dining } = variants;
 
@@ -31,7 +31,7 @@ const Button = ({
       }}
       onMouseEnter={() => setMouseOver(true)}
       onMouseLeave={() => setMouseOver(false)}
-      {...(contact && { type: 'submit' })}
+      {...(submit && { type: 'submit' })}
       className={`${
         menuBtn
           ? circle
@@ -42,7 +42,7 @@ const Button = ({
           : dining
           ? dining
           : null
-      } ${className} `}
+      } ${className}  `}
     >
       <div className="flex flex-col items-center relative overflow-hidden">
         <p

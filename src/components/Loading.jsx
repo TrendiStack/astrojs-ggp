@@ -12,7 +12,6 @@ const Loading = () => {
     loading
       ? (document.body.style.overflow = 'hidden')
       : (document.body.style.overflow = 'auto');
-
     gsap.to(elOne, {
       opacity: 0,
       display: 'none',
@@ -72,9 +71,9 @@ const Loading = () => {
       <p ref={loadingText} className="flex relative opacity-0">
         Loading
         <span ref={dots} className="flex">
-          <div className="">.</div>
-          <div className="">.</div>
-          <div className="">.</div>
+          <span className="opacity-0">.</span>
+          <span className="opacity-0">.</span>
+          <span className="opacity-0">.</span>
         </span>
       </p>
     </div>

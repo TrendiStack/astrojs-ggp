@@ -1,9 +1,9 @@
-import hero from '../assets/images/gelatogelatopizzeria_hero_.png';
-import Button from './ui/Button';
+import hero from '../../assets/images/gelatogelatopizzeria_hero_.png';
+import Button from '../ui/Button';
 
 const Banner = () => {
   return (
-    <div className="flex flex-col gap-14 md:gap-24 text-center mt-36 sm:mt-48 md:mt-52 xl:mt-20 2xl:mt-96">
+    <div className="flex flex-col gap-14 md:gap-24 text-center mt-36 sm:mt-48 md:mt-52 xl:mt-48 2xl:mt-96">
       <h1 className="header-secondary font-medium">
         Made
         <br /> Fresh daily

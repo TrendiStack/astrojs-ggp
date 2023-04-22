@@ -1,4 +1,4 @@
-import slideshow from '../assets/videos/ggpslidshow.mp4';
+import slideshow from '../../assets/videos/ggpslidshow.mp4';
 const Carousel = () => {
   return (
     <div
@@ -15,7 +15,8 @@ const Carousel = () => {
         justify-center 
         text-center 
         large-text 
-        lg:mx-20 
+        lg:mx-5
+        2xl:mx-20 
         h-[20vh] 
         lg:h-full
         px-[5%] lg:px-[2%]

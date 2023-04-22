@@ -1,15 +1,11 @@
-const UL = ({ children, className, setIsHovered }) => {
+import { forwardRef } from 'react';
+
+const UL = forwardRef(({ className, children }, ref) => {
   return (
-    <>
-      <ul
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-        className={`${className} text-base md:text-2xl lg:text-6xl uppercase overflow-y-scroll lg:h-[300px] hidescrollbar`}
-      >
-        {children}
-      </ul>
-    </>
+    <ul ref={ref} className={`${className} h-full`}>
+      {children}
+    </ul>
   );
-};
+});
 
 export default UL;

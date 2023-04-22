@@ -1,0 +1,25 @@
+---
+import CakeImage from './components/CakeImage';
+import Checkout from './components/Checkout.jsx';
+import Footer from '../../components/Footer.jsx';
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/nav/Nav.jsx';
+import Loading from '../../components/Loading.jsx';
+import '../../styles/global.css';
+---
+
+<Layout title="Menu">
+  <Loading client:load />
+  <Nav client:load />
+  <main
+    class="flex flex-col justify-between gap-48 md:gap-20 xl:gap-0 spartan h-screen mx-5 lg:mx-[2%] pt-40"
+  >
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 mx-auto max-w-[1200px]">
+      <div class="place-self-center h-full w-full">
+        <CakeImage />
+      </div>
+      <Checkout client:only />
+    </div>
+    <Footer />
+  </main>
+</Layout>
