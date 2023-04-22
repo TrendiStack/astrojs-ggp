@@ -18,11 +18,11 @@ import '../styles/global.css';
 <Layout title="Gelato Gelato">
   <LenisScroll client:only />
   <Loading client:load />
-  <main id="home-page" class="overflow-hidden mb-[85vh]">
-    <CakeBanner client:only />
+  <main id="home-page" class="overflow-hidden mb-[90vh]">
     <div
       class="flex flex-col gap-y-44 lg:gap-y-52 spartan bg-white relative z-[1] rounded-b-3xl"
     >
+      <CakeBanner client:load />
       <Nav client:load />
       <ScrollSpinner client:load />
       <Header client:load route="landing" />

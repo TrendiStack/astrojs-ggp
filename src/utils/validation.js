@@ -50,7 +50,7 @@ const cakeSchema = z.object({
   shape: z.string().min(3).max(10),
   size: z.string().min(3).max(9),
   quantity: z.number().min(1).max(10),
-  customQuantity: z.number(),
+  customQuantity: z.string().min(11).max(100),
 });
 
 const orderSchema = z.object({

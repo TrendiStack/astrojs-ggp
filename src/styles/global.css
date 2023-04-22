@@ -26,7 +26,7 @@ textarea:not(:placeholder-shown) ~ span {
 }
 
 .header-primary {
-  font-size: clamp(2rem, 7vw, 9rem);
+  font-size: clamp(2rem, 6vw, 9rem);
   line-height: 1;
 }
 

@@ -60,7 +60,7 @@ const Header = forwardRef(({ route }, ref) => {
   }, []);
   return (
     <div className="relative">
-      <div className="absolute grid grid-cols-1 gap-4 top-1/2 -translate-y-1/2 pb-24 mx-[5%] lg:mx-[2%] z-50">
+      {/* <div className="absolute grid grid-cols-1 gap-4 top-1/2 -translate-y-1/2 pb-24 mx-[5%] lg:mx-[2%] z-50">
         <DeliveryIcon
           href="https://order.online/store/gelato-gelato-pizzeria-vaughan-2415193/?hideModal=true&pickup=true"
           src={doorDash}
@@ -74,17 +74,32 @@ const Header = forwardRef(({ route }, ref) => {
           href="https://www.skipthedishes.com/gelato-gelato-pizzeria"
           src={skip}
         />
-      </div>
+      </div> */}
       {route === 'landing' ? (
         <header>
           <div
             ref={imgRef}
-            className="bg-[#ffd5c2] flex flex-col justify-center h-screen text-center font-medium spartan text-[#252422] header-primary relative overflow-hidden"
+            className="bg-[#ffd5c2] flex flex-col items-center justify-center h-screen text-center font-medium spartan text-[#252422] header-primary relative overflow-hidden"
           >
-            <h1 className="relative bottom-16">
+            <h1 className="relative bottom-24 lg:bottom-16">
               Sicilian flavors in every
               <br /> scoop and slice
             </h1>
+            <div className="flex gap-4 relative bottom-24 lg:bottom-14">
+              <DeliveryIcon
+                href="https://order.online/store/gelato-gelato-pizzeria-vaughan-2415193/?hideModal=true&pickup=true"
+                src={doorDash}
+              />
+
+              <DeliveryIcon
+                href="https://www.ubereats.com/ca/store/gelato-gelato-pizzeria/TcypftTcQp-c0ym2D0KPRQ"
+                src={ubereats}
+              />
+              <DeliveryIcon
+                href="https://www.skipthedishes.com/gelato-gelato-pizzeria"
+                src={skip}
+              />
+            </div>
             <div
               className="absolute flex justify-center rounded-full h-[40%] bg-[#a3a380] top-[60%] left-1/2 transform -translate-x-1/2 px-40 min-w-[100%] md:min-w-[80%] lg:min-w-[40%] max-w-[100%] md:max-w-[80%] lg:max-w-[40%] min-h-[100%]
          "
