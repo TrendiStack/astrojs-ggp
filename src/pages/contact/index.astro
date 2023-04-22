@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-// import Nav from '../../components/Nav/Nav.jsx';
+import Nav from '../../components/nav/Nav.jsx';
 import Contact from '../../components/Contact';
 import Header from '../../components/Header.jsx';
 import Loading from '../../components/Loading';
@@ -11,7 +11,7 @@ import '../../styles/global.css';
 
 <Layout title="Contact Us">
   <Loading client:load />
-  <!-- <Nav client:load /> -->
+  <Nav client:load />
   <LenisScroll client:only />
   <main class="spartan">
     <Header route="contact" client:visible />
